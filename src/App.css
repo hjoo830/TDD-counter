@@ -32,7 +32,23 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+/* -, + 버튼 */
+button[data-testid="minus-button"],
+button[data-testid="plus-button"] {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+
+/* on/off 버튼 */
+button[data-testid="on/off-button"] {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  margin-top: 20px;
 }
