@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# 🚀 TDD counter
+이 프로젝트는 테스트 주도 개발(TDD) 방식을 활용해 개발한 간단한 카운터 앱이다. TDD는 테스트를 먼저 작성하고, 이를 통과할 수 있는 코드를 나중에 작성하는 소프트웨어 개발 프로세스이다. TDD 방식을 통해 코드의 신뢰성을 높이고, 버그를 최소화할 수 있다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![tdd-demo](https://github.com/user-attachments/assets/5290b86a-4d58-436a-918d-282bd2b13742)
 
-## Available Scripts
 
-In the project directory, you can run:
+## 🛠 TDD란?
+테스트 주도 개발(Test-Driven Development, TDD)은 아래와 같은 3단계로 이루어진 개발 방법론이다.
 
-### `npm start`
+1. 테스트 작성: 먼저 원하는 기능이 어떻게 동작해야 하는지에 대한 테스트를 작성한다. 초기에는 실제 기능 코드가 없기 때문에 테스트는 실패한다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. 코드 작성: 테스트를 통과하기 위한 최소한의 기능 코드를 작성한다.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. 리팩토링: 테스트가 통과한 후, 코드의 가독성과 유지 보수성을 높이기 위해 코드를 정리(리팩토링)한다. 이때 테스트가 여전히 통과하는지 확인한다.
 
-### `npm test`
+TDD를 통해 작성된 코드는 원하는 대로 동작할 가능성이 높고, 코드의 품질과 안정성을 보장할 수 있다.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ 주요 기능
 
-### `npm run build`
+1. 🔢 카운터 표시
+- 현재 카운터의 값을 화면에 표시한다.
+- 카운터는 처음에 0으로 시작한다.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+2. ➕➖ 증가 및 감소 버튼
+- + 버튼을 누르면 카운터 값이 증가한다.
+- - 버튼을 누르면 카운터 값이 감소한다.
+  
+3. 🔵 on/off 버튼
+- on/off 버튼을 누르면 +와 - 버튼이 비활성화된다.
+     
+## 🧪 테스트
+- 카운터가 0에서 시작하는지 테스트
+- "+" 버튼을 눌렀을 때 카운터 값이 증가하는지, "-" 버튼을 눌렀을 때 카운터 값이 감소하는지 테스트
+- on/off 버튼을 클릭했을 때, +와 - 버튼이 비활성화되는지 테스트
+- on/off 버튼의 배경색이 파란색인지 테스트
